@@ -1,0 +1,46 @@
+.info-card {
+	margin: 10px;
+	-webkit-perspective: 600px;
+}
+
+.front, .back {
+
+	border-radius: 10px;
+	transition: -webkit-transform 1s;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+
+}
+
+.front {
+	overflow: hidden;
+  width: 100%;
+	height: 300px;
+	position: absolute;
+	z-index: 1;
+  background: #FFF;
+}
+
+.back {
+	padding: 30px;
+	width: 100%;
+	height: 300px;
+  transform: rotateY(-180deg);
+  background: #dff9fb;
+  background-repeat: no-repeat;
+  color:black;
+
+}
+
+.info-card:hover .back {
+transform: rotateY(0);
+}
+
+.info-card:hover .front {
+transform: rotateY(180deg);
+}
+
+.card-image {
+width: 100%;
+height: 80%;
+}
